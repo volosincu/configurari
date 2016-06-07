@@ -4,7 +4,7 @@
 
 if [[ $# -gt 0 ]] ; then
    
-  set -- `getopt -o f: --long indicator::,urgent-bg::,urgent-border::,urgent-text:: -n 'entering in parse.sh' -- "$@"`
+  set -- `getopt -o f: --long indicator:,urgent-bg:,urgent-border:,urgent-text: -n 'entering in parse.sh' -- "$@"`
   
 
   params=`echo $@ | awk 'BEGIN {}{gsub(/--[^[:alnum:]]/, "==");  print $0 }'`
@@ -26,7 +26,7 @@ if [[ $# -gt 0 ]] ; then
     
     declare -a optsx argsx
 
-
+    # add options and their arguments in separate arrays 
     j=0
     while [ $# -gt 1 ];do
       key=`echo $1 | sed -r 's/^(--|-)//'`
@@ -45,12 +45,12 @@ if [[ $# -gt 0 ]] ; then
 
          {
            split(opts,axopts ," ");
-           lngth=split(args,axargs ," ");
+           lngth = split(args,axargs ," ");
             
            for (i=1;i<=lngth;i++){
-             rgx="^(set)[[:blank:]]+\\$" axopts[i]
+             rgx = "^(set)[[:blank:]]+\\$" axopts[i]
              if(match($0, rgx)){
-               where=match($0, "(#[a-zA-Z0-9]{6})"); 
+               where = match($0, "(#[a-zA-Z0-9]{6})"); 
                if(where){ 
                   st = substr($0, RSTART, RLENGTH) ; 
                   gsub(st , axargs[i], $0);
@@ -59,7 +59,7 @@ if [[ $# -gt 0 ]] ; then
              }
            }
            print $0
-         } # endbody
+         } 
          END { }' $cfgfile > $onfile
   fi
 else
