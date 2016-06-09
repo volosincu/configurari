@@ -1,7 +1,6 @@
 #!/bin/bash 
 
 
-
 #  ./i3-color-tool.sh \
 #   -f /home/sony/.config/i3/config \
 #   --indicator='#FF0040' \
@@ -22,6 +21,7 @@
 #   --bar-inactive-ws-border='#373b41' \
 #   --bar-inactive-ws-bg='#373b41' \
 #   --bar-inactive-ws-text='#7d7f7d'
+
 
 if [[ $# == 0 ]] ; then
   echo "Please supply at least an parameter!"
@@ -47,7 +47,7 @@ bar-focus-ws-bg:,\
 bar-focus-ws-text:,\
 bar-inactive-ws-border:,\
 bar-inactive-ws-bg:,\
-bar-inactive-ws-text -n 'entering in parse.sh' -- "$@"`
+bar-inactive-ws-text: -n 'entering in parse.sh' -- "$@"`
   
 
   params=`echo $@ | awk 'BEGIN {}{gsub(/--[^[:alnum:]]/, "==");  print $0 }'`
