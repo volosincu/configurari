@@ -1,12 +1,13 @@
-
-;; Setup load-path, autoloads and your lisp system
-;; Not needed if you install SLIME via MELPA
-
-(add-to-list 'load-path "/home/${user)/descarcari/github/slime")
-(require 'slime-autoloads)
-(setq inferior-lisp-program "/usr/bin/clisp")
-
-
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
 
 
-(put 'upcase-region 'disabled nil)
+
+(ac-config-default)
+
+(load-file "~/.emacs.d/init.el")
