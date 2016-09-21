@@ -1,0 +1,39 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/debyan/lucru/gs-gradle/initial/src/main/java/" . "hello/")
+ ("/home/debyan/lucru/gs-gradle/initial/src/main/" . "java/")
+ ("/home/debyan/lucru/gs-gradle/initial/src/" . "main/")
+ ("/home/debyan/.emacs.d/" . "lisp/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/debyan/lucru/gs-gradle/initial/src/main/java/hello/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "HelloWorld.java"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/debyan/lucru/gs-gradle/initial/src/main/java/hello/" (22498 29818 90428 100000) "HelloWorld.java" "../" "./" "Greeter.java")
+
+ ("/home/debyan/lucru/gs-gradle/initial/src/main/java/" (22498 29062 754428 100000) "hello/" "../" "./")
+
+ ("/home/debyan/lucru/gs-gradle/initial/src/main/" (22498 29062 754428 100000) "java/" "../" "./")
+
+ ("/home/debyan/lucru/gs-gradle/initial/src/" (22498 29062 754428 100000) "main/" "../" "./")
+
+ ("/home/debyan/lucru/gs-gradle/initial/" (22498 31000 514428 100000) "build/" "gradle/" ".gradle/" "build.gradle" ".gitignore" "gradlew" "../" "src/" "./" "gradlew.bat")
+
+ ("/home/debyan/.emacs.d/lisp/" (22498 20852 388552 200000) "js-comint.el" "smooth-scrolling.el" "visws.el" "whitespace.el" "node_emacs" "../" "js-config.el" "linum.el" "./")
+
+ ("/home/debyan/.emacs.d/" (22498 23359 902428 100000) "init.el" "auto-save-list/" "init.el~" "elpa/" "../" "lisp/" "./" "ac-comphist.dat")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
