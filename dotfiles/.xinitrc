@@ -1,8 +1,8 @@
 
 xrdb -load ~/.Xresources
 
-
-
+xset b off
+xset b 0 0 0
 
 xset s off &
 xset -dpms &
